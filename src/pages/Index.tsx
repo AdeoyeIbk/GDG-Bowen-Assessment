@@ -4,11 +4,13 @@ export default function Index() {
       {/* Hero Section */}
       <section className="text-center py-12">
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-          Welcome to GDG Bowen
+          The dawn of a new era in health is here
         </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Building the future with technology, one developer at a time.
+        <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+          Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam
+          lacus platea orci vel elit blandit facilisis
         </p>
+        <button className="btn btn-primary mt-6 rounded">Join now</button>
       </section>
 
       {/* Content Sections */}

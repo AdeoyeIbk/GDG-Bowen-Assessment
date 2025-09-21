@@ -13,9 +13,9 @@ import { Twitter, Instagram, Linkedin, Facebook, Clover } from "lucide-react";
 const Footer: React.FC<FooterProps> = ({ navigation }) => {
   return (
     <footer className="bg-card">
-      <div className="container mx-auto px-4 py-12 flex justify-content-between">
+      <div className="container mx-auto px-4 py-12 flex w-full justify-between">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -59,9 +59,9 @@ const Footer: React.FC<FooterProps> = ({ navigation }) => {
           </div>
         </div>
         {/* Navigation Links */}
-        <div className="mt-8 pt-8 flex flex-col md:flex-row md:justify-between items-center">
+        <div className="flex flex-col md:flex-row md:justify-between items-center">
           <nav>
-            <ul>
+            <ul className="flex justify-content-between gap-8">
               {navigation.map((item) => (
                 <li key={item.name}>
                   <a href={item.href}>{item.name}</a>
