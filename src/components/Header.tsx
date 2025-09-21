@@ -46,7 +46,7 @@ const Header: React.FC<HeaderProps> = ({ navigation }) => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm/6 font-semibold text-foreground hover:text-primary transition-colors"
+                className="text-sm/6 font-medium text-foreground hover:text-primary transition-colors"
               >
                 {item.name}
               </a>

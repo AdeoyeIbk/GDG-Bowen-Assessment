@@ -12,8 +12,7 @@ import { Twitter, Instagram, Linkedin, Facebook, Clover } from "lucide-react";
 
 const Footer: React.FC<FooterProps> = ({ navigation }) => {
   return (
-    <footer className="bg-card">
-      <div className="container mx-auto px-4 py-12 flex w-full justify-between">
+    <footer className="bg-[#285E67] text-white w-full container mx-auto px-6 py-12 flex justify-between">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Company Info */}
@@ -70,7 +69,6 @@ const Footer: React.FC<FooterProps> = ({ navigation }) => {
             </ul>
           </nav>
         </div>
-      </div>
     </footer>
   );
 };
