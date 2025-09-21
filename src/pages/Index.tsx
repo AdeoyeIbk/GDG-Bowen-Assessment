@@ -1,16 +1,31 @@
+import heroImageOne from "@public/images/meditating.jpg";
+import heroImageTwo from "@public/images/mixing-food.jpg";
+
 export default function Index() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Hero Section */}
       <section className="text-center py-12">
-        <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+        <h1 className="text-2xl md:text-6xl font-semibold text-foreground mb-6">
           The dawn of a new era in health is here
         </h1>
-        <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+        <p className="text-l text-gray-700 mx-auto">
           Lorem ipsum dolor sit amet consectetur. Quam ut consequat at a. Diam
           lacus platea orci vel elit blandit facilisis
         </p>
         <button className="btn btn-primary mt-6 rounded">Join now</button>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <img
+            src={heroImageOne}
+            alt="meditating"
+            className="border rounded-lg h-full w-full object-cover"
+          />
+          <img
+            src={heroImageTwo}
+            alt="mixing food"
+            className="border rounded-lg h-full w-full object-cover"
+          />
+        </div>
       </section>
 
       {/* Content Sections */}

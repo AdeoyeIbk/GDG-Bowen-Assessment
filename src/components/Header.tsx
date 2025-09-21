@@ -52,14 +52,6 @@ const Header: React.FC<HeaderProps> = ({ navigation }) => {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              className="text-sm/6 font-semibold text-foreground hover:text-primary transition-colors"
-            >
-              Join Us <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
         </nav>
 
         {/* Mobile menu */}
@@ -72,10 +64,10 @@ const Header: React.FC<HeaderProps> = ({ navigation }) => {
             <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background p-6 sm:max-w-sm sm:ring-1 sm:ring-border">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
-                  <span className="sr-only">GDG Bowen</span>
+                  <span className="sr-only">New Health Era</span>
                   <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
                     <span className="text-primary-foreground font-bold text-sm">
-                      GDG
+                      <Clover />
                     </span>
                   </div>
                 </a>
@@ -100,14 +92,6 @@ const Header: React.FC<HeaderProps> = ({ navigation }) => {
                         {item.name}
                       </a>
                     ))}
-                  </div>
-                  <div className="py-6">
-                    <a
-                      href="#"
-                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-foreground hover:bg-accent"
-                    >
-                      Join now
-                    </a>
                   </div>
                 </div>
               </div>
