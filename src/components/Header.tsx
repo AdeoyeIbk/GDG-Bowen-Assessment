@@ -1,52 +1,117 @@
-export default function Header() {
-  return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">
-              GDG
-            </span>
-          </div>
-          <span className="text-xl font-bold text-foreground">Bowen</span>
-        </div>
+"use client";
 
-        {/* Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
-          <a
-            href="#"
-            className="text-foreground hover:text-primary transition-colors"
-          >
-            Home
-          </a>
-          <a
-            href="#"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            Events
-          </a>
-          <a
-            href="#"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            About
-          </a>
-          <a
-            href="#"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            Contact
-          </a>
+import { useState } from "react";
+import { Clover, Menu, X } from "lucide-react";
+
+const navigation = [
+  { name: "About", href: "#" },
+  { name: "Services", href: "#" },
+  { name: "Team", href: "#" },
+  { name: "Contact", href: "#" },
+];
+
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  return (
+    <div className="bg-background">
+      <header className="absolute inset-x-0 top-0 z-50">
+        <nav
+          aria-label="Global"
+          className="flex items-center justify-between p-6 lg:px-8"
+        >
+          <div className="flex lg:flex-1">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Logo</span>
+              <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
+                <Clover />
+              </div>
+            </a>
+          </div>
+          <div className="flex lg:hidden">
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(true)}
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-foreground"
+            >
+              <span className="sr-only">Open main menu</span>
+              <Menu aria-hidden="true" className="size-6" />
+            </button>
+          </div>
+          <div className="hidden lg:flex lg:gap-x-12">
+            {navigation.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-sm/6 font-semibold text-foreground hover:text-primary transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <a
+              href="#"
+              className="text-sm/6 font-semibold text-foreground hover:text-primary transition-colors"
+            >
+              Join Us <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
         </nav>
 
-        {/* CTA Button */}
-        <div className="flex items-center space-x-4">
-          <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors">
-            Join Us
-          </button>
-        </div>
-      </div>
-    </header>
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden">
+            <div
+              className="fixed inset-0 z-50 bg-background/80 backdrop-blur-sm"
+              onClick={() => setMobileMenuOpen(false)}
+            />
+            <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background p-6 sm:max-w-sm sm:ring-1 sm:ring-border">
+              <div className="flex items-center justify-between">
+                <a href="#" className="-m-1.5 p-1.5">
+                  <span className="sr-only">GDG Bowen</span>
+                  <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
+                    <span className="text-primary-foreground font-bold text-sm">
+                      GDG
+                    </span>
+                  </div>
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="-m-2.5 rounded-md p-2.5 text-foreground"
+                >
+                  <span className="sr-only">Close menu</span>
+                  <X aria-hidden="true" className="size-6" />
+                </button>
+              </div>
+              <div className="mt-6 flow-root">
+                <div className="-my-6 divide-y divide-border">
+                  <div className="space-y-2 py-6">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-foreground hover:bg-accent"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                  <div className="py-6">
+                    <a
+                      href="#"
+                      className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-foreground hover:bg-accent"
+                    >
+                      Join now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </header>
+    </div>
   );
 }
