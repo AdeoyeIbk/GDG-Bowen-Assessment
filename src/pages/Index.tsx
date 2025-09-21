@@ -129,13 +129,13 @@ export default function Index() {
       </section>
 
       {/* you are what you eat section */}
-      <section className="grid lg:grid-cols-2 grid-cols-1  md:py-12 py-12 md:px-44 px-12 rounded-lg bg-gray-100 mt-24 justify-center gap-8">
+      <section className="grid lg:grid-cols-2 grid-cols-1  md:py-12 py-12 md:px-44 px-6 rounded-lg bg-gray-100 mt-24 justify-center gap-8">
         <img
           src={illustration2}
           alt="cocktail illustration"
           className="hidden lg:block align-end justify-end h-68"
         />
-        <div className="flex flex-col lg:align-start justify-center">
+        <div className="flex flex-col lg:align-start justify-center gap-4">
           <h2 className="text-4xl sm:text-xl md:text-2xl lg:text-3xl text-center md:text-left font-semibold text-foreground mb-6">
             You are what you eat
           </h2>
@@ -155,6 +155,20 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+
+      {/* CTA Section */}
+      {/* <section className="w-full py-16 flex flex-col items-center justify-center bg-[#285E67] rounded-lg mt-24">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white text-center mb-6">
+          Ready to start your health journey?
+        </h2>
+        <p className="text-lg text-white/80 text-center max-w-xl mb-8">
+          Join our community and unlock a new era of wellbeing. Get access to expert tips, healthy recipes, and more!
+        </p>
+        <button className="btn btn-primary px-10 py-4 rounded-full text-lg font-semibold shadow-lg">
+          Get Started
+        </button>
+      </section> */}
     </div>
   );
 }
