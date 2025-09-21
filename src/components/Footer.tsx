@@ -14,7 +14,7 @@ const Footer: React.FC<FooterProps> = ({ navigation }) => {
   return (
     <footer className="bg-[#285E67] text-white w-full px-6 sm:px-16 py-12 flex sm:justify-start justify-center align-start">
       {/* Main Footer Content */}
-      <div className="sm:flex flex-col grid grid-cols-1 lg:grid-cols-2 sm:gap-4 gap-8 justify-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-8 justify-between sm:w-full">
         {/* Company Info */}
         <div className="flex items-center space-x-2">
           <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">

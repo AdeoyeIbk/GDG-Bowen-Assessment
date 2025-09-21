@@ -1,7 +1,8 @@
 import heroImageOne from "@/images/meditating.jpg";
 import heroImageTwo from "@/images/mixing-food.jpg";
 import meditatingIllustration from "@/images/meditating-illustration.png";
-import freshProduce from "@/images/fresh-produce.jpg";import illustration2 from "@/images/illustration-2.png";
+import freshProduce from "@/images/fresh-produce.jpg";
+import illustration2 from "@/images/illustration-2.png";
 import { Leaf, Flower2 } from "lucide-react";
 
 export default function Index() {
@@ -36,10 +37,10 @@ export default function Index() {
   ];
 
   return (
-    <div className="container px-16 my-24">
+    <div className="container sm:px-16 px-4 my-24">
       {/* Hero Section */}
       <section className="text-center py-12">
-        <h1 className="text-2xl md:text-6xl font-medium text-foreground mb-6">
+        <h1 className="text-6xl md:text-6xl font-semibold text-foreground mb-6">
           The dawn of a new era in health is here
         </h1>
         <p className="text-lg text-gray-700 mx-auto">
@@ -68,7 +69,7 @@ export default function Index() {
       {/* wellbeing */}
       <section className="grid lg:grid-cols-2 grid-cols-1 gap-8 px-12 rounded-lg bg-gray-100 pt-12">
         <div className="flex flex-col justify-center">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-foreground mb-6">
+          <h2 className="text-4xl sm:text-xl md:text-2xl lg:text-3xl text-center md:text-left font-semibold text-foreground mb-6">
             Wellbeing is welldoing
           </h2>
           <div className="flex gap-8 md:flex-row flex-col">
@@ -98,12 +99,12 @@ export default function Index() {
         <img
           src={freshProduce}
           alt="Fresh Produce"
-          className="hidden md:block align-end justify-end rounded-lg w-full object-cover"
+          className="md:block align-end justify-end rounded-lg w-full object-cover"
           style={{ height: "30rem" }}
         />
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-1">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-foreground">
+            <h2 className="text-4xl sm:text-xl md:text-2xl lg:text-3xl text-center md:text-left font-semibold text-foreground">
               Fresh organic produce
             </h2>
             <p className="text-muted-foreground lg:text-left text-sm">
@@ -135,7 +136,7 @@ export default function Index() {
           className="hidden lg:block align-end justify-end h-68"
         />
         <div className="flex flex-col lg:align-start justify-center">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl lg:text-left font-semibold text-foreground mb-6">
+          <h2 className="text-4xl sm:text-xl md:text-2xl lg:text-3xl text-center md:text-left font-semibold text-foreground mb-6">
             You are what you eat
           </h2>
           <div className="flex gap-8 md:flex-row flex-col">
