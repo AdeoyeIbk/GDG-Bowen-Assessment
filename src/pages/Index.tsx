@@ -36,7 +36,7 @@ export default function Index() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 my-24">
       {/* Hero Section */}
       <section className="text-center py-12">
         <h1 className="text-2xl md:text-6xl font-medium text-foreground mb-6">
@@ -130,7 +130,7 @@ export default function Index() {
       </section>
 
       {/* you are what you eat section */}
-      <section className="grid lg:grid-cols-2 grid-cols-1  py-12 px-6 rounded-lg bg-gray-100 mt-24 justify-center gap-8">
+      <section className="grid lg:grid-cols-2 grid-cols-1  md:py-12 md:px-44 px-12 rounded-lg bg-gray-100 mt-24 justify-center gap-8">
         <img
           src={illustration2}
           alt="cocktail illustration"
