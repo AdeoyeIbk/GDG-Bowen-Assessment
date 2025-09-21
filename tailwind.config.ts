@@ -32,14 +32,15 @@ const config: Config = {
 
         // === BRAND COLORS ===
         brand: {
-          green: "#4ADE80", // Adjusted green tone
+          green: "#285E67", // Updated brand green
           peach: "#FFCBA4",
           "light-peach": "#FFF2E8",
         },
+        "brand-green": "#285E67",
 
         // === PRIMARY SYSTEM ===
         primary: {
-          DEFAULT: "#4ADE80", // Brand green
+          DEFAULT: "#285E67", // Brand green
           foreground: "#000000",
         },
 
@@ -54,7 +55,11 @@ const config: Config = {
           DEFAULT: "#FFCBA4", // Brand peach
           foreground: "#000000",
         },
-
+        // === Green COLORS ===
+        green: {
+          DEFAULT: "#285E67", // Brand green
+          foreground: "#000000",
+        },
         // === GRAY SCALE (From your design system) ===
         gray: {
           10: "#F7F7F7",
@@ -80,7 +85,7 @@ const config: Config = {
         },
         border: "#EEEEEE",
         input: "#F7F7F7",
-        ring: "#4ADE80",
+        ring: "#285E67",
 
         // === STATE COLORS ===
         destructive: {
@@ -88,7 +93,7 @@ const config: Config = {
           foreground: "#FFFFFF",
         },
         success: {
-          DEFAULT: "#4ADE80",
+          DEFAULT: "#285E67",
           foreground: "#000000",
         },
         warning: {
@@ -98,7 +103,7 @@ const config: Config = {
 
         // === CHART COLORS ===
         chart: {
-          "1": "#4ADE80",
+          "1": "#285E67",
           "2": "#FFCBA4",
           "3": "#1A1A1A",
           "4": "#CCCCCC",
