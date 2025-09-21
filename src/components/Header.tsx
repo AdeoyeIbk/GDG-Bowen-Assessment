@@ -2,15 +2,18 @@
 
 import { useState } from "react";
 import { Clover, Menu, X } from "lucide-react";
+import React from "react";
 
-const navigation = [
-  { name: "About", href: "#" },
-  { name: "Services", href: "#" },
-  { name: "Team", href: "#" },
-  { name: "Contact", href: "#" },
-];
+interface NavigationItem {
+  name: string;
+  href: string;
+}
 
-export default function Header() {
+interface HeaderProps {
+  navigation: NavigationItem[];
+}
+
+const Header: React.FC<HeaderProps> = ({ navigation }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -114,4 +117,5 @@ export default function Header() {
       </header>
     </div>
   );
-}
+};
+export default Header;
